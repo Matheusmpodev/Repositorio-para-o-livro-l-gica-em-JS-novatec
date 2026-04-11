@@ -6,7 +6,7 @@ frm.addEventListener("submit", (e) => {
 
     const nome = frm.txt1.value
     const masculino = frm.txt2.value
-    const altura = parseFloat(frm.txt4.value (",", "."))
+    const altura = parseFloat(frm.txt4.value.replace(",", "."))
     let peso
     if (masculino) {
         peso = 22 * Math.pow(altura, 2)
