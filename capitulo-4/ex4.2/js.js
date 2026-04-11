@@ -14,5 +14,9 @@ frm.addEventListener("submit", (e) => {
         peso = 21 * Math.pow(altura, 2)
     }
 
-    resp.innerText = `${nome}: Seupeso ideal é ${peso.toFixed(3)}Kg`
+    resp.innerText = `${nome}: Seupeso ideal é ${peso.toFixed(2)}Kg`
+})
+
+frm.addEventListener("reset", () => {
+    resp.innerText = ""
 })
