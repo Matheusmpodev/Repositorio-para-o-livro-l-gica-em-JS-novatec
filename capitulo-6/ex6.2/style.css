@@ -1,0 +1,14 @@
+.oculta {
+    display: none
+}
+
+.exibe {
+    display: block    
+}
+
+form p {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    };
