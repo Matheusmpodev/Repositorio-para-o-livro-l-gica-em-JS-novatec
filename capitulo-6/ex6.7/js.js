@@ -45,7 +45,7 @@ frm.btListar.addEventListener("click", (e) => {
 });
 
 document.getElementById("btAprovados2").addEventListener("click", () => {
-  const aprovados = frm.candidatos.filter((item) => item.acertos > frm.pontosAprovacao);
+  const aprovados = frm.candidatos.filter((item) => item.acertos > frm.pontosAprovacao);// o filter cria uma nova lista só com os elementos aprovados sem modificar a array original
 
   if (aprovados.length === 0) {
     resp1.innerText = "Nenhum candidato aprovado.";
@@ -55,7 +55,7 @@ document.getElementById("btAprovados2").addEventListener("click", () => {
 
   let listaAprovados = "";
   aprovados.forEach((item, index) => {
-    listaAprovados += `${index + 1}. ${item.candidato} - ${item.acertos} acertos\n`;
+    listaAprovados += `${index + 1}. ${item.candidato} - ${item.acertos} acertos\n`; //percorre cada elemento, sendo item o candidato e a nota, o index a posição, e a lista vai escrever pra cada candidato, item e a posição q ele passar uma string que sera escrita no resp1 depois
   });
 
   resp1.innerText = listaAprovados;
