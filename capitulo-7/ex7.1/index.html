@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numero palavras</title>
+</head>
+<body>
+    <script>
+        const anuncio = prompt("Anuncio: ")
+        let numPalavras = 0
+        const tam = anuncio.length // retorna o número de caracteres
+        for (let i = 0; i < tam; i++) //´percorre cada caractere
+        {
+            if (anuncio.charAt(i) == " ") // vai passando por todos os caracteres, se em algum caractere do anuncio o charAt(i = que é um caractere por vez) == " " ou seja for um espaço, isso vai contar como separar a quantidade de palavras
+            {
+                numPalavras ++
+            }
+        }
+
+        alert(`Anúncio: ${anuncio}\n N° Palavras: ${numPalavras + 1}`)
+
+        /*também poderia ter sido feito usando for...of
+        let numPalavras = 0
+        for (const letra of anuncio) 
+        {
+            if (letra == " ") 
+            {
+                numPalavras ++
+            }
+        }
+        alert(`Anúncio: ${anuncio}\n N° Palavras: ${numPalavras + 1}`)    
+        */
+
+
+    </script>
+
+</body>
+</html>
