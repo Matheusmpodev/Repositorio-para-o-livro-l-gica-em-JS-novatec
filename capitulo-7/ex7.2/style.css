@@ -1,0 +1,12 @@
+h1 
+{
+    border-bottom-style: inset;
+}
+.entre-letras 
+{
+    letter-spacing: 0.8em;
+}
+.alinha-direita 
+{
+    text-align: right;
+}
