@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inverte</title>
+</head>
+<body>
+    <script>
+        const palavra = prompt("palavra: ")
+        const tam = palavra.length //palavra.length retorna o tamanho da string, e o tamanho é guardado em tam.
+        let inverso = palavra.charAt(tam - 1).toUpperCase()
+        for (let i = tam - 2; i >= 0; i--) 
+        {
+            inverso += palavra.charAt(i).toLowerCase()
+        }
+        alert(`Palavra: ${palavra}\nInvertida: ${inverso}`)
+
+        /* 
+        palavra.charAt(tam - 1) pega o último caractere da palavra. 
+        .toUpperCase() transforma esse caractere em maiúscula.
+        O resultado é guardado em inverso.
+
+        for (let i = tam - 2; i >= 0; i--) começa no penúltimo caractere e vai até o primeiro.
+        
+        isso acontece assim: let i = tam - 2
+
+        tam é o tamanho da palavra.
+        tam - 1 seria o último índice.
+        tam - 2 é o penúltimo índice.
+        Então o laço começa no penúltimo caractere.
+        
+        i >= 0
+        enquanto i for maior ou igual a zero, o laço continua.
+        0 é o índice do primeiro caractere.
+        Isso garante que o laço percorra até o primeiro caractere.
+        
+        i--
+        a cada repetição, i diminui 1.
+        assim, ele vai indo da direita para a esquerda.
+        
+        Exemplo com palavra = "JAVA"
+        Em JavaScript, os índices da string começam em 0:
+
+        palavra[0] é o primeiro caractere
+        palavra[1] é o segundo
+        palavra[2] é o terceiro
+        e assim por diante...
+
+        tam = 4 - 2 = 2 -> [2] terceira letra
+        começa com i = 4 - 2 = 2 → terceiro caractere ("V")
+        depois i = 1 → segundo caractere ("A")
+        depois i = 0 → primeiro caractere ("J")
+        quando i vira -1, a condição i >= 0 falha e o laço para
+        Por isso
+        tam - 2 define o ponto de partida no penúltimo caractere
+        i >= 0 define o fim no primeiro caractere
+        i-- faz o índice andar para trás, um por um
+                
+        {
+        inverso += palavra.charAt(i).toLowerCase()
+        for (let i = tam - 2; i >= 0; i--) começa no penúltimo caractere e vai até o primeiro.
+
+        A cada passo:
+
+        palavra.charAt(i) pega o caractere atual.
+        .toLowerCase() transforma esse caractere em minúscula.
+        inverso += ... adiciona esse caractere ao final da string inverso.
+        Isso faz a palavra ser construída de trás para frente.
+        } 
+        */ 
+    </script>
+</body>
+</html> explique cada parte desse código
