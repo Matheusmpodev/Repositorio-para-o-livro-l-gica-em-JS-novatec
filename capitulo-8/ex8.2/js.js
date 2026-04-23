@@ -14,13 +14,10 @@ const classificarVeiculo = (ano) =>
                     }
         return classif
     }
-const calcularEntrada = (valor, status) => 
+const calcularEntrada = (valor, status) => // corpo da função com uma unica expressão nn necessita {} e return, esse caso se colocarmos o {} o corpo se torna um bloco de código e necessita um return explicito, sem ele o valor nn é devolvido e retorna undefined quebrando o claculo
     
         status == "Novo" ? valor * 0.5 : valor * 0.3
     
-
-
-
 const frm = document.querySelector("form")
 const resp1 = document.querySelector("#outResp1")
 const resp2 = document.querySelector("#outResp2")
