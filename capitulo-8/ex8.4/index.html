@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria aven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pizzaria Avenida - Controle de Pedidos</h1>
+    <form>
+        <p>Item do Pedido: <!-- no input do tipo radio, se vc colocar as opções do mesmo grupo com um mesmo name: o navegador sozinho vai corrigir para ser possível escolher apenas uma opção por vez -->
+        
+        <input type="radio" name="Produto" id="rbPizza" checked autofocus> Pizza
+        <input type="radio" name="Produto" id="rbBebida"> Bebida
+
+        <span id="inItem">Item:</span>
+
+        <select name="inPizza" id="inPizza">
+            <option value="media">Pizza Média</option>
+            <option value="grande">Pizza grande</option>
+            <option value="familia">Pizza família</option>
+        </select>
+
+        <select name="inBebida" id="inBebida" class="oculta">
+            <option value="refri">refrigerante</option>
+            <option value="suco">Jarra de suco</option>
+            <option value="água">Água Mineral</option>
+        </select>
+        </p>
+
+        <p>Detalhes do Item: 
+            <input type="text" name="inDetalhes" id="inDetalhes" class="detalhes">
+            <input type="submit" value="Adicionar">
+        </p>
+    </form>
+    <pre></pre>
+    <script src="js.js"></script>
+</body>
+</html>
