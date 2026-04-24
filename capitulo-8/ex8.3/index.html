@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parâmetros Rest</title>
+</head>
+<body>
+    <script>
+        const calcularMedia = (...notas) => 
+        {
+            const num = notas.length
+            if (num == 0) 
+            {
+                console.log("Informe, no minimo, uma nota")
+                return
+            }
+            let soma = 0
+            for (const nota of notas) 
+            {
+                soma += nota
+            }
+            const media = soma / num
+            console.log(`Média: ${media.toFixed(1)}`)
+        }
+
+        calcularMedia(6, 7, 8)
+    </script>
+</body>
+</html>
