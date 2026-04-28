@@ -1,9 +1,9 @@
 const verApostaExiste = (peso) => 
     {
-        if (localStorage.getItem("melanciaPeso")) 
+        if (localStorage.getItem("melanciaPeso")) //recuperar string
             {
-                const pesos = localStorage.getItem("melanciaPeso").split(";")
-                return pesos.includes(peso.toString())
+                const pesos = localStorage.getItem("melanciaPeso").split(";") // divide a string em array 
+                return pesos.includes(peso.toString()) //verifica se o peso (convertido para string) está incluído com includes(). Retorna true se duplicado, false
             } else 
                 {
                     return false
@@ -47,20 +47,20 @@ frm.addEventListener("submit", (e) => {
             return
         }
 
-        if (localStorage.getItem("melanciaNome")) 
+        if (localStorage.getItem("melanciaNome")) //Verifica se já há apostas salvas. Se sim, adiciona novos dados aos existentes; se não, cria os dados pela primeira vez, ex "joão".
         {
-            const melanciaNome = localStorage.getItem("melanciaNome") + ";" + nome
+            const melanciaNome = localStorage.getItem("melanciaNome") + ";" + nome //recupera a string ex joão, adiciona um separador ";" e add o novo nome "João;Maria"
             const melanciaPeso = localStorage.getItem("melanciaPeso") + ";" + peso
-            localStorage.setItem("melanciaNome" , melanciaNome)
+            localStorage.setItem("melanciaNome" , melanciaNome) //substitui valores antigos pelos novos
             localStorage.setItem("melanciaPeso", melanciaPeso)
         } else 
             {
                 localStorage.setItem("melanciaNome", nome)
                 localStorage.setItem("melanciaPeso", peso)
             }
-        mostrarApostas()
-        frm.reset()
-        frm.inNome.focus()
+        mostrarApostas() //exibe lista atualizada
+        frm.reset() //limpa campus
+        frm.inNome.focus() //foca no campo
 })
 
 frm.btVencedor.addEventListener("click", () => {
